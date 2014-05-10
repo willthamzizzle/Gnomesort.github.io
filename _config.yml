@@ -4,7 +4,10 @@ email: thammovo@eng.utah.edu
 description: "A software guys musing on life"
 baseurl: ""
 url: "willthamzizzle.github.io"
-username: willintowill
+
+# usernames for various social media stuff
+twittername: willintowill
+githubname: willthamzizzle
 
 # Build settings
 markdown: kramdown

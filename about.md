@@ -9,4 +9,4 @@ with an emphasis in Entertainment Arts & Engineering.
 
 This a site where I post various random projects and for me to test some of my web programming out.
 
-And for those that are interested, Here is my [resume.]({{ site.url }}/assets/TheResume.pdf)
+And for those that are interested, Here is my [resume.](/assets/TheResume.pdf)

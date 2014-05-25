@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Caesar Square Box Encryption"
-date:   2014-05-025 18:56:17
-categories: code stuff
+title:  "Caesar square box encryption"
+date:   2014-05-25 18:56:17
+categories: code update
 ---
 
-something here
+stuff about that encryption here.

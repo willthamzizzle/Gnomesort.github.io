@@ -11,4 +11,4 @@ This a site where I post various random projects and for me to test some of my w
 
 And for those that are interested, Here is my [resume][resumeLink]
 
-[resumeLink]: ({{ site.url }}/assets/TheResume.pdf)
+[resumeLink]: {{ site.url }}/assets/TheResume.pdf

@@ -1,4 +1,4 @@
 willthamzizzle.github.io
 ========================
 
-Personal test website
+Personal website for Will

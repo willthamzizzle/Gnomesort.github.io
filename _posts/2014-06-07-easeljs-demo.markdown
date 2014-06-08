@@ -5,6 +5,13 @@ date:       2014-06-07 18:56:17
 categories: code update
 tags:       easeljs
 ---
+html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>EaselJS Example: rollover and mouseover</title>
+
+	<link href="assets/demoStyles.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
 
 <!-- We also provide hosted minified versions of all CreateJS libraries.
 	  http://code.createjs.com -->

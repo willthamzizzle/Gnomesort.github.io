@@ -1,0 +1,54 @@
+---
+layout:     post
+title:      "Fun With Some EaselJS"
+date:       2014-06-07 18:56:17
+categories: code update
+tags:       easeljs
+---
+
+<html>
+<head>
+	<title>EaselJS demo: onClick</title>
+	<link href="../_shared/demo.css" rel="stylesheet" type="text/css">
+	<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+	  http://code.createjs.com -->
+
+
+	<script>
+	function init() {
+		// get a reference to the canvas we'll be working with:
+		var canvas = document.getElementById("testCanvas");
+
+		// create a stage object to work with the canvas. This is the top level node in the display list:
+		var stage = new createjs.Stage(canvas);
+
+		// Create a new Text object:
+		var text = new createjs.Text("Hello World!", "36px Arial", "#777");
+
+		// add the text as a child of the stage. This means it will be drawn any time the stage is updated
+		// and that its transformations will be relative to the stage coordinates:
+		stage.addChild(text);
+
+		// position the text on screen, relative to the stage coordinates:
+		text.x = 360;
+		text.y = 200;
+
+		// call update on the stage to make it render the current display list to the canvas:
+		stage.update();
+	}
+	</script>
+</head>
+
+<body onload="init();">
+
+	<header id="header" class="EaselJS">
+	    <h1><span class="text-product">Easel<strong>JS</strong></span> Hello World!</h1>
+	    <p>Hello World example using <strong>Text</strong> and <strong>Stage</strong>.</p>
+	</header>
+
+	<div class="canvasHolder">
+		<canvas id="testCanvas" width="960" height="400"></canvas>
+	</div>
+</body>
+</html>

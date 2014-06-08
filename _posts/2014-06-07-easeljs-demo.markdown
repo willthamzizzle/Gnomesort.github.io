@@ -6,36 +6,46 @@ categories: code update
 tags:       easeljs
 ---
 
-<html>
-<head>
-	<title>EaselJS demo: onClick</title>
-	<link href="../_shared/demo.css" rel="stylesheet" type="text/css">
-	<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
-	<!-- We also provide hosted minified versions of all CreateJS libraries.
+<!-- We also provide hosted minified versions of all CreateJS libraries.
 	  http://code.createjs.com -->
 
-
 	<script>
+	var stage,text;
+
 	function init() {
-		// get a reference to the canvas we'll be working with:
-		var canvas = document.getElementById("testCanvas");
-
 		// create a stage object to work with the canvas. This is the top level node in the display list:
-		var stage = new createjs.Stage(canvas);
+		stage = new createjs.Stage("testCanvas");
+		stage.name = "stage";
+		stage.enableMouseOver(20);
 
-		// Create a new Text object:
-		var text = new createjs.Text("Hello World!", "36px Arial", "#777");
+		// Create a simple hierarchy:
+		var container = stage.addChild(new createjs.Container()).set({name:"container"});
 
-		// add the text as a child of the stage. This means it will be drawn any time the stage is updated
-		// and that its transformations will be relative to the stage coordinates:
-		stage.addChild(text);
+		var blue = container.addChild(new createjs.Shape()).set({name:"blue", x:50, y:50});
+		blue.graphics.beginFill("#00F").drawRect(0,0,200,200);
+		var red = container.addChild(new createjs.Shape()).set({name:"red", x:100, y:100});
+		red.graphics.beginFill("#F00").drawRect(0,0,100,100);
 
-		// position the text on screen, relative to the stage coordinates:
-		text.x = 360;
-		text.y = 200;
+		container.addEventListener("mouseover", handleEvt);
+		container.addEventListener("mouseout", handleEvt);
+		container.addEventListener("rollover", handleEvt);
+		container.addEventListener("rollout", handleEvt);
+
+		container.cursor = "pointer";
+		red.cursor = "";
+
+		// text object to output the
+		text = stage.addChild(new createjs.Text("", "14px monospace", "#FFF")).set({x:260, y:20, lineHeight:20});
 
 		// call update on the stage to make it render the current display list to the canvas:
-		stage.update();
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+
+	var log = [];
+	function handleEvt(evt) {
+		log.push("type="+evt.type+" target="+evt.target.name+" currentTarget="+evt.currentTarget.name);
+		while (log.length > 12) { log.shift(); }
+		text.text = log.join("\n");
 	}
 	</script>
 </head>
@@ -43,8 +53,15 @@ tags:       easeljs
 <body onload="init();">
 
 	<header id="header" class="EaselJS">
-	    <h1><span class="text-product">Easel<strong>JS</strong></span> Hello World!</h1>
-	    <p>Hello World example using <strong>Text</strong> and <strong>Stage</strong>.</p>
+	    <h1><span class="text-product">Easel<strong>JS</strong></span> rollover and mouseover</h1>
+	    <p>This example demonstrates the difference between rollover/out and mouseover/out events. The red and blue squares
+	    are separate Shape instances within a parent Container. The Container has both rollover/rollout and
+	    mouseover/mouseout events.</p>
+	    <p>
+		Note how the mouseover/mouseout events are triggered whenever you move between different display objects
+		(ex. moving from the blue to red shape), but the rollover/rollout events are only triggered when you leave the
+		Container's aggregate contents.
+	    </p>
 	</header>
 
 	<div class="canvasHolder">

@@ -5,7 +5,7 @@ date:       2014-06-07 18:56:17
 categories: code update
 tags:       easeljs
 ---
-html>
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>EaselJS Example: rollover and mouseover</title>

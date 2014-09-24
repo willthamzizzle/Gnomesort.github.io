@@ -11,4 +11,4 @@ This my personal site where I post various random project ideas and for me to te
 
 And for those that are interested, Here is my [resume.](/assets/TheResume.pdf) And here is my [LinkedIn profile][LinkedIn]
 
-[LinkedIn]: www.linkedin.com/in/williamtham/
+[LinkedIn]: http://www.linkedin.com/in/williamtham/

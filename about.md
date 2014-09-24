@@ -9,4 +9,6 @@ with an emphasis in Entertainment Arts & Engineering.
 
 This my personal site where I post various random project ideas and for me to test some of my web programming out.
 
-And for those that are interested, Here is my [resume.](/assets/TheResume.pdf)
+And for those that are interested, Here is my [resume.](/assets/TheResume.pdf) And here is my [LinkedIn profile][LinkedIn]
+
+[LinkedIn]: www.linkedin.com/in/williamtham/

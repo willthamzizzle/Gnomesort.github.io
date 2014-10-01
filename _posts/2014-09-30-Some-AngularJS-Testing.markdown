@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "AngularJS testing"
+title:      "BootStrap testing"
 date:       2014-09-30 18:56:17
 categories: code
-tags:       AngularJS
+tags:       BootStrap
 ---
 
 Here is some AngularJS stuff

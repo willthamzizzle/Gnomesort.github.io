@@ -6,6 +6,6 @@ categories: code
 tags:       BootStrap
 ---
 
-Here is some [Bootstrap stuff][Bootstrap]
+Here is some [Bootstrap stuff][Bootstrap] that I am currently testing.
 
 [Bootstrap]: http://willthamzizzle.github.io/test/BootstrapTest/index.html

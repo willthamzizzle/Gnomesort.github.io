@@ -8,4 +8,4 @@ tags:       BootStrap
 
 Here is some [Bootstrap stuff][Bootstrap]
 
-[Bootstrap]: http://willthamzizzle.github.io/test/BootstrapTest/index.html/
+[Bootstrap]: http://willthamzizzle.github.io/test/BootstrapTest/index.html

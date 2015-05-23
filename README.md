@@ -1,4 +1,4 @@
-willthamzizzle.github.io
+Gnomesort.github.io
 ========================
 
 Personal website for me.
